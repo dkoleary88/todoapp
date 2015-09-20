@@ -1,0 +1,18 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "todo app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Daniel O'Leary",
+  "license": "ISC",
+  "dependencies": {
+    "bookshelf": "^0.8.2",
+    "express": "^4.13.3",
+    "knex": "^0.8.6",
+    "sqlite3": "^3.1.0"
+  }
+}

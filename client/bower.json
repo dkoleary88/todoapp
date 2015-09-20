@@ -1,0 +1,22 @@
+{
+  "name": "Todo App",
+  "version": "0.0.0",
+  "authors": [
+    "dkoleary88 <dan@dko.io>"
+  ],
+  "description": "Todo app yo",
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.3",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3"
+  }
+}
