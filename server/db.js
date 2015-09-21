@@ -7,7 +7,7 @@ var knex = require('knex')({
 
 knex.schema.hasTable('todo').then(function(exists) {
   if (!exists) {
-    db.knex.schema.createTable('todo', function (todo) {
+    knex.schema.createTable('todo', function (todo) {
       todo.increments('id').primary();
       todo.string('text', 255);
       todo.boolean('done');

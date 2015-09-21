@@ -1,1 +1,3 @@
-$('body').append()
+$(function() {
+  $('body').append(new AppView().el);
+});

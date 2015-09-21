@@ -1,3 +1,8 @@
 var Todos = Backbone.Collection.extend({
-  model: Todo
+  model: Todo,
+  url: '/todos',
+
+  initialize: function() {
+    this.fetch();
+  }
 });
