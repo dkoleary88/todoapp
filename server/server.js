@@ -25,6 +25,15 @@ app.put('/todos/:id', function(req, res) {
     });
 });
 
+app.delete('/todos/:id', function(req, res) {
+  db.Todo.where({id: req.params.id})
+    .destroy()
+    .then(function() {
+      res.status(200)
+        .end();
+    });
+});
+
 app.post('/todos', function(req, res) {
   new db.Todo(req.body).save()
     .then(function() {

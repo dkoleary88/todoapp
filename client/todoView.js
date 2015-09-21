@@ -11,7 +11,7 @@ var TodoView = Backbone.View.extend({
   },
 
   check: function() {
-    this.model.set('done', this.$el.find('input').checked);
+    this.model.set('done', this.$el.find('input').prop('checked'));
   },
 
   remove: function() {

@@ -20,8 +20,7 @@ var FormView = Backbone.View.extend({
 
     var text = this.$el.find('input');
     this.collection.create({text: text.val(), done: false});
-
-    // text.val('');
+    text.val('');
   },
 
   render: function() {
