@@ -12,7 +12,7 @@ app.use(express.static('../client'));
 app.get('/todos', function(req, res) {
   db.Todo.fetchAll()
     .then(function(collection) {
-      res.status(200).end();
+      res.status(200).end(JSON.stringify(collection));
     });
 });
 
@@ -26,13 +26,11 @@ app.put('/todos/:id', function(req, res) {
 });
 
 app.post('/todos', function(req, res) {
-  console.log(req.body);
   new db.Todo(req.body).save()
     .then(function() {
-      res.status(201).end(201);
+      res.status(201).end();
     })
     .catch(function(err) {
-      console.log(err);
       res.status(500).send(err);
     });
 });
